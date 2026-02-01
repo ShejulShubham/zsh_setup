@@ -45,8 +45,7 @@ setopt appendhistory sharehistory hist_ignore_space hist_ignore_all_dups \
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-# Preview directories using ls when tab-completing 'cd'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color=auto -- $realpath'
+# Enable it for ALL commands that complete files/directories
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'ls --color=auto -- $realpath'
 
 # Load FZF integration if installed
@@ -80,7 +79,7 @@ if [ -d "$HOME/Everything" ]; then
     alias zeromoq="cd ~/Everything/Work/TrustAdditiveDjango"
     alias programming="cd ~/Everything/Programming"
     alias notes="cd ~/Everything/Notes"
-
+    
     # Auto-backup config to your repo path if it exists
     BACKUP_PATH="$HOME/Everything/Programming/Autostart"
     if [ -d "$BACKUP_PATH" ]; then

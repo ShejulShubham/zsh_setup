@@ -2,6 +2,14 @@
 
 Before using the `.zshrc` configuration I gave you, make sure the following packages are installed:
 
+### **0. Update Packages**
+
+```bash
+sudo apt update          # Debian/Ubuntu
+sudo dnf update          # Fedora/RHEL
+sudo pacman -Syu            # Arch
+```
+
 ### **1. Core Shell**
 
 * **Zsh** (the main shell)
@@ -63,3 +71,20 @@ sudo pacman -S ttf-hack-nerd            # Arch
 After installation, select the Nerd Font in your terminal’s settings.
 
 ---
+
+### **6. One-Liner Command for installation for Debian/Ubuntu**
+(You can change the package manager for other distro)
+```bash
+# 1. Update and install dependencies
+sudo apt update && sudo apt install -y zsh git fzf curl fonts-hack-nerd
+
+# 2. Change default shell to Zsh
+chsh -s $(which zsh)
+
+# 3. Clone your config repo (Replace with your actual repo URL)
+git clone https://github.com/yourusername/your-repo.git ~/temp-config
+cp ~/temp-config/.zshrc ~/.zshrc
+
+# 4. Restart terminal or run:
+zsh
+```
