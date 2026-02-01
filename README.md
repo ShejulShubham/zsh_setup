@@ -1,7 +1,3 @@
-Alright — here’s your **pre-setup note** so you know exactly what to install before using that `.zshrc`.
-
----
-
 ## **Zsh + Plugin Environment Pre-Setup Note**
 
 Before using the `.zshrc` configuration I gave you, make sure the following packages are installed:
